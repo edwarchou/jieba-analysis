@@ -275,12 +275,10 @@ public class Word implements CharSequence {
      * /java/lang/Character.html#unicode">surrogate</a>, the surrogate value is
      * returned.
      *
-     * @param index
-     *            the index of the <code>char</code> value to be returned
+     * @param index the index of the <code>char</code> value to be returned
      * @return the specified <code>char</code> value
-     * @throws IndexOutOfBoundsException
-     *             if the <tt>index</tt> argument is negative or not less than
-     *             <tt>length()</tt>
+     * @throws IndexOutOfBoundsException if the <tt>index</tt> argument is negative or not less than
+     *                                   <tt>length()</tt>
      */
     @Override
     public char charAt(int index) {
@@ -296,15 +294,12 @@ public class Word implements CharSequence {
      * sequence is <tt>end - start</tt>, so if <tt>start == end</tt> then an
      * empty sequence is returned.
      *
-     * @param start
-     *            the start index, inclusive
-     * @param end
-     *            the end index, exclusive
+     * @param start the start index, inclusive
+     * @param end   the end index, exclusive
      * @return the specified subsequence
-     * @throws IndexOutOfBoundsException
-     *             if <tt>start</tt> or <tt>end</tt> are negative, if
-     *             <tt>end</tt> is greater than <tt>length()</tt>, or if
-     *             <tt>start</tt> is greater than <tt>end</tt>
+     * @throws IndexOutOfBoundsException if <tt>start</tt> or <tt>end</tt> are negative, if
+     *                                   <tt>end</tt> is greater than <tt>length()</tt>, or if
+     *                                   <tt>start</tt> is greater than <tt>end</tt>
      */
     @Override
     public Word subSequence(int start, int end) {

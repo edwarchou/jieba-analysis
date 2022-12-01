@@ -1,12 +1,6 @@
 package com.huaban.analysis.jieba;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -16,8 +10,8 @@ import java.util.Set;
 
 
 public class WordDictionary {
-    private static WordDictionary singleton;
     private static final String MAIN_DICT = "/dict.txt";
+    private static WordDictionary singleton;
     private static String USER_DICT_SUFFIX = ".dict";
 
     public final Map<String, Double> freqs = new HashMap<String, Double>();
@@ -46,6 +40,7 @@ public class WordDictionary {
     /**
      * for ES to initialize the user dictionary.
      * You can call this method periodly for dynamic load new word
+     *
      * @param configFile
      */
     public void init(File configFile) {
